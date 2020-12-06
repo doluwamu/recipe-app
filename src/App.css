@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.search {
+  margin: 1rem auto;
+  max-width: 800px;
+  padding: 1rem 0.3rem;
+}
+
+.search__input {
+  margin-left: 30%;
+  width: 150px;
+  padding: 2px 0;
+  outline: none;
+}
+
+.search__submit {
+  margin: 0 auto;
+  padding: 2px 0;
+  cursor: pointer;
+}
