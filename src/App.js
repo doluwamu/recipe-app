@@ -17,7 +17,7 @@ const App = () => {
 
   const getRecipes = async () => {
     const response = await fetch(
-      `https://api.edamam.com/search?q=chicken&app_id=${API_ID}&app_key=${API_KEY}`
+      `https://api.edamam.com/search?q=banana&app_id=${API_ID}&app_key=${API_KEY}`
     );
     const data = await response.json();
     // console.log(data.hits);
@@ -47,10 +47,11 @@ const App = () => {
       <div className="body">
         {recipes &&
           recipes.length > 0 &&
-          recipes.map((r) => {
+          recipes.slice(0, 10).map((r) => {
             return (
-              <div key={id}>
+              <div key={r.recipe.shareAs} className="mb-2">
                 <img src={r.recipe.image} alt="" />
+                <p>{r.recipe.label}</p>
               </div>
             );
           })}
